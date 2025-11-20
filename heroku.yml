@@ -3,4 +3,4 @@ build:
     worker: Dockerfile
 
 run:
-  web: python3 -m ZoxxNetwork
+  worker: python3 -m ZoxxNetwork
