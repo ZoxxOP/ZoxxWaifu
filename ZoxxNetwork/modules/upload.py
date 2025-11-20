@@ -174,15 +174,35 @@ application.add_handler(DELETE_HANDLER)
 UPDATE_HANDLER = CommandHandler('update', update, block=False)
 application.add_handler(UPDATE_HANDLER)
 
-from pyrogram import Client, filters
+import os
+from pyrogram import filters
+from pyrogram.types import InputMediaVideo, InlineKeyboardMarkup, InlineKeyboardButton
 
-@Client.on_callback_query(filters.regex("ent_vid"))
-async def send_entertainment_video(client, query):
+Entertainment_Video = "https://files.catbox.moe/m5qcx3.mp4"
+
+
+@app.on_callback_query(filters.regex("ent_vid"))
+async def show_entertainment_video(_, query):
     await query.answer()
     try:
-        await query.message.reply_video(
-            "https://files.catbox.moe/m5qcx3.mp4",
-            caption="Enjoy ❤️"
+        video_link = os.getenv("ENT_VIDEO", Entertainment_Video)
+
+        await query.message.edit_media(
+            media=InputMediaVideo(
+                media=video_link,
+                has_spoiler=True, 
+            ),
+            reply_markup=InlineKeyboardMarkup(
+                [
+                    [
+                        InlineKeyboardButton(
+                            text="‹ ʙᴀᴄᴋ", 
+                            callback_data="settingsback_helper"
+                        )
+                    ]
+                ]
+            ),
         )
+
     except Exception as e:
-        await query.message.reply_text(f"Error: {e}")
+        await query.message.reply_text(f"Failed to show video: {e}")
