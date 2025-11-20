@@ -42,6 +42,8 @@ async def start(update: Update, context: CallbackContext) -> None:
             [InlineKeyboardButton("ᴀᴅᴅ ᴍᴇ ɪɴ ʏᴏᴜʀ ɢʀᴏᴜᴘ", url=f'http://t.me/{BOT_USERNAME}?startgroup=new')],
             [InlineKeyboardButton("sᴜᴘᴘᴏʀᴛ", url=f'https://t.me/{SUPPORT_CHAT}'),
             InlineKeyboardButton("ᴜᴘᴅᴀᴛᴇs", url=f'https://t.me/{UPDATE_CHAT}')],
+            [InlineKeyboardButton("ᴏᴡɴᴇʀ", url=config.OWNER_ID),
+             InlineKeyboardButton("ᴇɴᴛᴇʀᴛᴀɪɴᴍᴇɴᴛ", url=f"https://files.catbox.moe/m5qcx3.mp4")],
             [InlineKeyboardButton("ʜᴇʟᴘ ᴀɴᴅ ᴄᴏᴍᴍᴀɴᴅs", callback_data='help')]
                ]
         reply_markup = InlineKeyboardMarkup(keyboard)
@@ -55,6 +57,8 @@ async def start(update: Update, context: CallbackContext) -> None:
             [InlineKeyboardButton("ᴀᴅᴅ ᴍᴇ ɪɴ ʏᴏᴜʀ ɢʀᴏᴜᴘ", url=f'http://t.me/{BOT_USERNAME}?startgroup=new')],
             [InlineKeyboardButton("sᴜᴘᴘᴏʀᴛ", url=f'https://t.me/{SUPPORT_CHAT}'),
             InlineKeyboardButton("ᴜᴘᴅᴀᴛᴇs", url=f'https://t.me/{UPDATE_CHAT}')],
+            [InlineKeyboardButton("ᴏᴡɴᴇʀ", url=config.OWNER_ID),
+             InlineKeyboardButton("ᴇɴᴛᴇʀᴛᴀɪɴᴍᴇɴᴛ", url=f"https://files.catbox.moe/m5qcx3.mp4")],
             [InlineKeyboardButton("ʜᴇʟᴘ ᴀɴᴅ ᴄᴏᴍᴍᴀɴᴅs", callback_data='help')]
                 ]
         
@@ -97,6 +101,8 @@ async def button(update: Update, context: CallbackContext) -> None:
             [InlineKeyboardButton("ᴀᴅᴅ ᴍᴇ ɪɴ ʏᴏᴜʀ ɢʀᴏᴜᴘ", url=f'http://t.me/{BOT_USERNAME}?startgroup=new')],
             [InlineKeyboardButton("sᴜᴘᴘᴏʀᴛ", url=f'https://t.me/{SUPPORT_CHAT}'),
             InlineKeyboardButton("ᴜᴘᴅᴀᴛᴇs", url=f'https://t.me/{UPDATE_CHAT}')],
+            [InlineKeyboardButton("ᴏᴡɴᴇʀ", url=config.OWNER_ID),
+             InlineKeyboardButton("ᴇɴᴛᴇʀᴛᴀɪɴᴍᴇɴᴛ", url=f"https://files.catbox.moe/m5qcx3.mp4")],
             [InlineKeyboardButton("ʜᴇʟᴘ ᴀɴᴅ ᴄᴏᴍᴍᴀɴᴅs", callback_data='help')]
                ]
         reply_markup = InlineKeyboardMarkup(keyboard)
