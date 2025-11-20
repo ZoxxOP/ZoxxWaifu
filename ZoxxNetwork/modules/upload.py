@@ -173,3 +173,16 @@ DELETE_HANDLER = CommandHandler('delete', delete, block=False)
 application.add_handler(DELETE_HANDLER)
 UPDATE_HANDLER = CommandHandler('update', update, block=False)
 application.add_handler(UPDATE_HANDLER)
+
+from pyrogram import Client, filters
+
+@Client.on_callback_query(filters.regex("ent_vid"))
+async def send_entertainment_video(client, query):
+    await query.answer()
+    try:
+        await query.message.reply_video(
+            "https://files.catbox.moe/m5qcx3.mp4",
+            caption="Enjoy ❤️"
+        )
+    except Exception as e:
+        await query.message.reply_text(f"Error: {e}")
