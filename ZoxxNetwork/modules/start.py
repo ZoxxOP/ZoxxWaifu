@@ -43,7 +43,10 @@ async def start(update: Update, context: CallbackContext) -> None:
             [InlineKeyboardButton("sᴜᴘᴘᴏʀᴛ", url=f'https://t.me/{SUPPORT_CHAT}'),
             InlineKeyboardButton("ᴜᴘᴅᴀᴛᴇs", url=f'https://t.me/{UPDATE_CHAT}')],
             [InlineKeyboardButton("ᴏᴡɴᴇʀ", url=f"https://t.me/WTF_NoHope"),
-             InlineKeyboardButton("ᴇɴᴛᴇʀᴛᴀɪɴᴍᴇɴᴛ", url=f"https://files.catbox.moe/m5qcx3.mp4")],
+             InlineKeyboardButton(
+    "ᴇɴᴛᴇʀᴛᴀɪɴᴍᴇɴᴛ",
+    callback_data="entertainment_video"
+             )],
             [InlineKeyboardButton("ʜᴇʟᴘ ᴀɴᴅ ᴄᴏᴍᴍᴀɴᴅs", callback_data='help')]
                ]
         reply_markup = InlineKeyboardMarkup(keyboard)
@@ -58,7 +61,10 @@ async def start(update: Update, context: CallbackContext) -> None:
             [InlineKeyboardButton("sᴜᴘᴘᴏʀᴛ", url=f'https://t.me/{SUPPORT_CHAT}'),
             InlineKeyboardButton("ᴜᴘᴅᴀᴛᴇs", url=f'https://t.me/{UPDATE_CHAT}')],
             [InlineKeyboardButton("ᴏᴡɴᴇʀ", url=f"https://t.me/WTF_NoHope"),
-             InlineKeyboardButton("ᴇɴᴛᴇʀᴛᴀɪɴᴍᴇɴᴛ", url=f"https://files.catbox.moe/m5qcx3.mp4")],
+             InlineKeyboardButton(
+    "ᴇɴᴛᴇʀᴛᴀɪɴᴍᴇɴᴛ",
+    callback_data="entertainment_video"
+             )],
             [InlineKeyboardButton("ʜᴇʟᴘ ᴀɴᴅ ᴄᴏᴍᴍᴀɴᴅs", callback_data='help')]
                 ]
         
@@ -102,7 +108,10 @@ async def button(update: Update, context: CallbackContext) -> None:
             [InlineKeyboardButton("sᴜᴘᴘᴏʀᴛ", url=f'https://t.me/{SUPPORT_CHAT}'),
             InlineKeyboardButton("ᴜᴘᴅᴀᴛᴇs", url=f'https://t.me/{UPDATE_CHAT}')],
             [InlineKeyboardButton("ᴏᴡɴᴇʀ", url=f"https://t.me/WTF_NoHope"),
-             InlineKeyboardButton("ᴇɴᴛᴇʀᴛᴀɪɴᴍᴇɴᴛ", url=f"https://files.catbox.moe/m5qcx3.mp4")],
+             InlineKeyboardButton(
+    "ᴇɴᴛᴇʀᴛᴀɪɴᴍᴇɴᴛ",
+    callback_data="entertainment_video"
+             )],
             [InlineKeyboardButton("ʜᴇʟᴘ ᴀɴᴅ ᴄᴏᴍᴍᴀɴᴅs", callback_data='help')]
                ]
         reply_markup = InlineKeyboardMarkup(keyboard)
