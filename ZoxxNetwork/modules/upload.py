@@ -181,7 +181,7 @@ from pyrogram.types import InputMediaVideo, InlineKeyboardMarkup, InlineKeyboard
 Entertainment_Video = "https://files.catbox.moe/m5qcx3.mp4"
 
 
-@app.on_callback_query(filters.regex("ent_vid"))
+@Waifuu.on_callback_query(filters.regex("ent_vid"))
 async def show_entertainment_video(_, query):
     await query.answer()
     try:
