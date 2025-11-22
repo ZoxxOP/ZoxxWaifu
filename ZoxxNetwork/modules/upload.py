@@ -178,26 +178,31 @@ import os
 from pyrogram import filters
 from pyrogram.types import InputMediaVideo, InlineKeyboardMarkup, InlineKeyboardButton
 
+from ZoxxNetwork import Waifuu   # Make sure your Pyrogram client is imported
+
+# Default video link
 Entertainment_Video = "https://files.catbox.moe/m5qcx3.mp4"
 
 
-@Waifuu.on_callback_query(filters.regex("ENT_VID"))
+@Waifuu.on_callback_query(filters.regex("^ent_vid$"))
 async def show_entertainment_video(_, query):
     await query.answer()
+
     try:
+        # ENV first, otherwise fallback
         video_link = os.getenv("ENT_VID", Entertainment_Video)
 
         await query.message.edit_media(
             media=InputMediaVideo(
                 media=video_link,
-                has_spoiler=True, 
+                has_spoiler=True,
             ),
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
                         InlineKeyboardButton(
-                            text="‹ ʙᴀᴄᴋ", 
-                            callback_data="settingsback_helper"
+                            text="⤾ Bᴀᴄᴋ",
+                            callback_data="back"   # goes back to PTB handler
                         )
                     ]
                 ]
@@ -205,4 +210,4 @@ async def show_entertainment_video(_, query):
         )
 
     except Exception as e:
-        await query.message.reply_text(f"Failed to show video: {e}")
+        await query.message.reply_text(f"❌ Failed to show video: {e}")
