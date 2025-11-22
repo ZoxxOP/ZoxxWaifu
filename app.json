@@ -105,6 +105,14 @@
         "required": false
 
       },
+        "ENT_VID": {
+            
+            "discription": "Show entertainment vedio please give video url",
+
+            "value": "https://files.catbox.moe/m5qcx3.mp4",
+
+            "required": false
+        },
 
       "LOG_GROUP_ID": {
 
