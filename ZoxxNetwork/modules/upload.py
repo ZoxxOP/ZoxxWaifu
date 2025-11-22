@@ -185,7 +185,7 @@ Entertainment_Video = "https://files.catbox.moe/m5qcx3.mp4"
 async def show_entertainment_video(_, query):
     await query.answer()
     try:
-        video_link = os.getenv("ENT_VIDEO", Entertainment_Video)
+        video_link = os.getenv("ENT_VID", Entertainment_Video)
 
         await query.message.edit_media(
             media=InputMediaVideo(
