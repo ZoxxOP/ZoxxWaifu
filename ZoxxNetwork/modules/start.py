@@ -45,7 +45,7 @@ async def start(update: Update, context: CallbackContext) -> None:
             [InlineKeyboardButton("ᴏᴡɴᴇʀ", url=f"https://t.me/WTF_NoHope"),
              InlineKeyboardButton(
     "ᴇɴᴛᴇʀᴛᴀɪɴᴍᴇɴᴛ",
-    callback_data="ent_vid"
+    callback_data="ENT_VID"
              )],
             [InlineKeyboardButton("ʜᴇʟᴘ ᴀɴᴅ ᴄᴏᴍᴍᴀɴᴅs", callback_data='help')]
                ]
@@ -63,7 +63,7 @@ async def start(update: Update, context: CallbackContext) -> None:
             [InlineKeyboardButton("ᴏᴡɴᴇʀ", url=f"https://t.me/WTF_NoHope"),
              InlineKeyboardButton(
     "ᴇɴᴛᴇʀᴛᴀɪɴᴍᴇɴᴛ",
-    callback_data="ent_vid"
+    callback_data="ENT_VID"
              )],
             [InlineKeyboardButton("ʜᴇʟᴘ ᴀɴᴅ ᴄᴏᴍᴍᴀɴᴅs", callback_data='help')]
                 ]
@@ -110,7 +110,7 @@ async def button(update: Update, context: CallbackContext) -> None:
             [InlineKeyboardButton("ᴏᴡɴᴇʀ", url=f"https://t.me/WTF_NoHope"),
              InlineKeyboardButton(
     "ᴇɴᴛᴇʀᴛᴀɪɴᴍᴇɴᴛ",
-    callback_data="ent_vid"
+    callback_data="ENT_VID"
              )],
             [InlineKeyboardButton("ʜᴇʟᴘ ᴀɴᴅ ᴄᴏᴍᴍᴀɴᴅs", callback_data='help')]
                ]
